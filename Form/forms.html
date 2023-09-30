@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Form Page</title>
+</head>
+<body>
+    <section class="form-section">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" >
+                    <span className="focus"></span>
+                </div>
+                
+
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" >
+                    <span className="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" >
+                    <span className="focus"></span>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" >
+                    <span className="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="password" id="pass" placeholder="Password" required>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" placeholder="Confirm password" id="conPass" required>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" ></textarea>
+                <span className="focus"></span>
+            </div>
+
+            
+
+            <div class="btn-box ">
+                <button href="#" onclick="checkPassword()" class="btn">Check password</button>
+
+             </div>
+        </form>
+    </section>
+
+    <script src="forms.js"></script>
+</body>
+</html>
