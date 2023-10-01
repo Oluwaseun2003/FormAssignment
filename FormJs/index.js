@@ -41,44 +41,56 @@ console.log("the double of " + num + " is " + doublenum )
 
 
 
-// let btnFunc = document.querySelector("#butn")
+var button = document.getElementById("butnFunc");
 
+button.addEventListener("click", printValues);
 
-// Define the checkPasswords function
-// function operation (){
-//     let pas = document.querySelector("#pass").value
-//     let conPas = document.querySelector("#conPass").value
-
-
-//     if(pas === conPas) {
-//         alert("Access Granted")
-//     } else{
-//         alert("Access Denied")
-//     }
-
-// }
-
-
-
-
-
-// Get the button element using querySelector
-let button = document.querySelector("#butnFunc");
-
-
-// Attach the checkPasswords function to the button click event using addEventListener
-button.addEventListener("click", checkPasswords);
-
-// Define the checkPasswords function
 function checkPasswords() {
     let password = document.getElementById("pass").value;
     let confirmPassword = document.getElementById("conPass").value;
-
     if (password === confirmPassword) {
-        alert("Access Granted!, Gbayi");
+       alert("Access Granted!, Gbayi")
+       return true;
     } else {
-        alert("Access Denied!, Comot for here!!.");
+        alert("Access Denied!, comot for here");
+        return false;
     }
 }
 
+function printValues() {
+    // Get input values
+    var fullName = document.querySelector('input[placeholder="Full Name"]').value;
+    var Email = document.querySelector('input[placeholder="Email Address"]').value;
+    var mobileNumber = document.querySelector('input[placeholder="Mobile Number"]').value;
+    var password = document.getElementById("pass").value;
+    var confirmPassword = document.getElementById("conPass").value;
+    var messageDiv = document.getElementById("message");
 
+
+ 
+
+    // Check Values 
+       if (!fullName) {
+        alert("Please Full Name is required.");
+    } else if (!Email) {
+        alert("Please Email Address is required.");
+    } else if (!mobileNumber) {
+        alert("Please Mobile Number is required.");
+    } else if (!password || !confirmPassword) {
+        alert("Please Passwords are required.");
+    }
+    
+    // Check Values 
+    
+    else if (checkPasswords()) {
+        let newtxt = document.createElement("h3");    
+        newtxt.textContent = "Full Name: " + fullName + ", " + "Email: " + Email + ", " + "Mobile Number: " + mobileNumber ;
+        messageDiv.appendChild(newtxt);
+        
+        newtxt.style.color = "white";
+        newtxt.style.fontFamily = "poppins";
+        newtxt.style.fontSize = "2rem";
+        newtxt.style.alignItems = "center";
+        console.log(newtxt);
+    } 
+}

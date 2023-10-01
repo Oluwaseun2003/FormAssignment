@@ -99,7 +99,14 @@ span{
     z-index: -1;
     transition: .5s;
 }
-
+.form-section .input-box #message{
+    justify-self: center;
+    width: 50rem;
+    height: 30rem;
+    margin-top: 10rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
 
 .form-section form .input-box .input-field input:focus~.focus,
 .form-section form .input-box .input-field input:valid~.focus,
@@ -121,8 +128,6 @@ span{
 
 
 .form-section.btn-box{
-    justify-content: center;
-    align-items: center;
     display: flex;
     width: 34.5rem;
     height: 5rem;
@@ -131,8 +136,6 @@ span{
 .form-section .btn-box .btn{
     position: relative;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
    padding: 1rem 2rem;
     background: var(--main-color);
     border: .2rem solid var(--main-color);
