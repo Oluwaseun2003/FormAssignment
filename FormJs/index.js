@@ -69,7 +69,7 @@ function printValues() {
 
  
 
-    // Check Values 
+    // Check password 
        if (!fullName) {
         alert("Please Full Name is required.");
     } else if (!Email) {
